@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import logo from "@/assets/logo.asset.json";
 import { nav, site } from "@/lib/site";
+import { Mark } from "./Mark";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,13 +22,8 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
-        <a href="#topo" className="flex items-center gap-3">
-          <img
-            src={logo.url}
-            alt="Logotipo Mycherlanne Oliveira Gestão Empresarial"
-            className="h-9 w-9 rounded-full object-cover object-center"
-            style={{ objectPosition: "34% 46%" }}
-          />
+        <a href="#topo" className="flex items-center gap-3" aria-label={site.name}>
+          <Mark className="h-7 w-7" />
           <span className="font-display text-base tracking-[0.18em] uppercase text-ivory">
             {site.name}
           </span>
