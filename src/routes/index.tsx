@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
+import { Intro } from "@/components/Intro";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Differentials } from "@/components/Differentials";
@@ -48,6 +49,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="min-h-screen bg-marsala-deep scroll-smooth">
+      <Intro />
       <Header />
       <main>
         <Hero />
