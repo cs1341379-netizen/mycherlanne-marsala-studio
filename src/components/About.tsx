@@ -1,4 +1,4 @@
-import retrato from "@/assets/retrato.asset.json";
+import retrato from "@/assets/retrato-hd.jpg.asset.json";
 
 export function About() {
   return (
