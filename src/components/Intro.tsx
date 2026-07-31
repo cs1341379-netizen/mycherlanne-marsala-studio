@@ -45,25 +45,20 @@ export function Intro() {
       {(["left", "right"] as const).map((side) => (
         <div
           key={side}
-          className="absolute inset-y-0 w-1/2 overflow-hidden bg-marsala-deep"
+          className="absolute inset-0 bg-marsala-deep"
           style={{
-            [side === "left" ? "left" : "right"]: 0,
+            clipPath: side === "left" ? "inset(0 50% 0 0)" : "inset(0 0 0 50%)",
             animation: `intro-part-${side} 1.1s cubic-bezier(0.76, 0, 0.24, 1) 1.4s forwards`,
           }}
         >
           <div
-            className="absolute inset-y-0 w-screen"
-            style={{ [side === "left" ? "left" : "right"]: 0 }}
+            className="absolute top-1/2 left-1/2 h-40 w-40 md:h-56 md:w-56"
+            style={{
+              animation: "intro-diamond 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+              opacity: 0,
+            }}
           >
-            <div
-              className="absolute top-1/2 left-1/2 h-40 w-40 md:h-56 md:w-56"
-              style={{
-                animation: "intro-diamond 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards",
-                opacity: 0,
-              }}
-            >
-              <DiamondShape />
-            </div>
+            <DiamondShape />
           </div>
         </div>
       ))}
