@@ -1,5 +1,5 @@
-import logo from "@/assets/logo.asset.json";
 import { site } from "@/lib/site";
+import { Mark } from "./Mark";
 
 export function Footer() {
   const links = [
@@ -12,13 +12,7 @@ export function Footer() {
     <footer className="border-t border-gold/15 bg-marsala-deep py-14">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 px-6 md:flex-row md:justify-between">
         <div className="flex items-center gap-3">
-          <img
-            src={logo.url}
-            alt="Logotipo Mycherlanne Oliveira"
-            loading="lazy"
-            className="h-8 w-8 rounded-full object-cover"
-            style={{ objectPosition: "34% 46%" }}
-          />
+          <Mark className="h-8 w-8" />
           <div>
             <div className="font-display text-sm tracking-[0.18em] uppercase text-ivory">
               {site.name}
