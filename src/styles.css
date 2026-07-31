@@ -44,6 +44,57 @@
   }
 }
 
+@keyframes intro-diamond {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.7) rotate(-6deg);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes intro-shine {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes intro-part-left {
+  to {
+    transform: translateX(-101%);
+  }
+}
+
+@keyframes intro-part-right {
+  to {
+    transform: translateX(101%);
+  }
+}
+
+@keyframes intro-line {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) scaleX(0.2);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-50%) scaleX(1);
+  }
+  70%,
+  100% {
+    opacity: 0;
+  }
+}
+
 @utility reveal {
   opacity: 0;
   animation: fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
