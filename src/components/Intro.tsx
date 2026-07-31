@@ -58,7 +58,6 @@ export function Intro() {
             <div
               className="absolute top-1/2 left-1/2 h-40 w-40 md:h-56 md:w-56"
               style={{
-                marginLeft: "-5rem",
                 animation: "intro-diamond 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards",
                 opacity: 0,
               }}
