@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
 
-function DiamondHalf({ side }: { side: "left" | "right" }) {
+function DiamondShape() {
   return (
     <svg
       viewBox="0 0 100 90"
       className="h-full w-full"
       fill="none"
       aria-hidden="true"
-      style={{
-        clipPath: side === "left" ? "inset(0 50% 0 0)" : "inset(0 0 0 50%)",
-      }}
     >
       <g
         stroke="var(--gold)"
@@ -48,22 +45,26 @@ export function Intro() {
       {(["left", "right"] as const).map((side) => (
         <div
           key={side}
-          className="absolute inset-y-0 w-1/2 bg-marsala-deep"
+          className="absolute inset-y-0 w-1/2 overflow-hidden bg-marsala-deep"
           style={{
             [side === "left" ? "left" : "right"]: 0,
             animation: `intro-part-${side} 1.1s cubic-bezier(0.76, 0, 0.24, 1) 1.4s forwards`,
           }}
         >
           <div
-            className="absolute top-1/2 h-40 w-40 -translate-y-1/2 md:h-56 md:w-56"
-            style={{
-              [side === "left" ? "right" : "left"]: 0,
-              [side === "left" ? "marginRight" : "marginLeft"]: "-50%",
-              animation: "intro-diamond 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards",
-              opacity: 0,
-            }}
+            className="absolute inset-y-0 w-screen"
+            style={{ [side === "left" ? "left" : "right"]: 0 }}
           >
-            <DiamondHalf side={side} />
+            <div
+              className="absolute top-1/2 left-1/2 h-40 w-40 md:h-56 md:w-56"
+              style={{
+                marginLeft: "-5rem",
+                animation: "intro-diamond 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+                opacity: 0,
+              }}
+            >
+              <DiamondShape />
+            </div>
           </div>
         </div>
       ))}
