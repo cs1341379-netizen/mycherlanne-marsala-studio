@@ -45,8 +45,10 @@ export function Intro() {
       {(["left", "right"] as const).map((side) => (
         <div
           key={side}
-          className="absolute inset-0 bg-marsala-deep"
+          className="fixed inset-0 bg-marsala-deep"
           style={{
+            width: "100vw",
+            height: "100vh",
             clipPath: side === "left" ? "inset(0 50% 0 0)" : "inset(0 0 0 50%)",
             animation: `intro-part-${side} 1.1s cubic-bezier(0.76, 0, 0.24, 1) 1.4s forwards`,
           }}
