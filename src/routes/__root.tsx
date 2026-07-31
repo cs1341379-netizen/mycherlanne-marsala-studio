@@ -88,10 +88,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         property: "og:description",
         content:
-          "Consultoria fiscal, treinamento de processos e contabilidade estratégica.",
+          "Consultoria fiscal, treinamento de processos e contabilidade estratégica para empresas que buscam excelência.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Mycherlanne Oliveira | Gestão Empresarial" },
+      { name: "twitter:description", content: "Consultoria fiscal, treinamento de processos e contabilidade estratégica para empresas que buscam excelência." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a07ea623-afcf-47cd-8c2a-34824e92b3d2/id-preview-b67c7b48--9981bd71-99a6-4b54-9f26-03c7b25a58ba.lovable.app-1785468501383.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a07ea623-afcf-47cd-8c2a-34824e92b3d2/id-preview-b67c7b48--9981bd71-99a6-4b54-9f26-03c7b25a58ba.lovable.app-1785468501383.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
